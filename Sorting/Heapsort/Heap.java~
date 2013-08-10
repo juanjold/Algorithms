@@ -2,9 +2,7 @@
  * @author Juan José López Delgado
 */
 
-public class Heap
-
-{
+public class Heap {
  public int[] array;
 
   public Heap (int elem) {

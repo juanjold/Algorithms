@@ -1,0 +1,17 @@
+public class Sort {
+  
+  public Sort() {
+  }
+  
+  public static void insertionSort(int[] arr) {
+    int buff, hole = 0;
+    for (int i = 1; i < arr.length; i++) {
+      buff = arr[i];
+      hole = i;
+      while (hole > 0 && buff < arr[hole - 1]) {
+        arr[hole] = arr[hole - 1];
+        hole--;
+      }
+      arr[hole] = buff;
+  }  
+}
