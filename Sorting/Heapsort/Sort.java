@@ -53,6 +53,30 @@ public class Sort {
   }
   
   private static int[] merge(int[] left, int[] right){
-    return right;
+    int length = left.length + right.length;
+    int i = 0, j = 0, k = 0;
+    int[] arr = new int[length];
+    
+    while( k < length) {
+      if (i < left.length && j < right.length){
+        if (left[i] < right[j]) {
+          arr[k] = left[i];
+          i++;
+        } else {
+          arr[k] = right[j];
+          j++;
+        }
+        k++;
+      } else if ( i >= left.length ) {
+        arr[k] = right[j];
+        j++;
+        k++;
+      } else if (j >= right.length) {
+        arr[k] = left[i];
+        i++;
+        k++;
+      }
+    }
+    return arr;
   }
 }
