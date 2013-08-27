@@ -33,9 +33,8 @@ public class uniqueTester {
 	for ( int i = 1; i < charArr.length; i++ ) {
 	    if (charArr[i] == charArr[i-1])
 		return false;
-	    else
-		return true;
 	}
+	return true;
     }
 
     public static void main (String[] args) {

@@ -37,6 +37,15 @@ public class uniqueTester {
 	return true;
     }
 
+    public boolean TestNoSpace (String cin) { //no extra space use, complexity O(n^2) though
+	for (int i = 0; i < cin.length(); i++) {
+	    for (int j = i + 1; j < cin.length(); j++) {
+		if(cin.charAt(i) == cin.charAt(j)) { return false; }
+	    }
+	}
+	return true;
+    }
+
     public static void main (String[] args) {
 	uniqueTester test = new uniqueTester();
 	System.out.println("Testing HashMap Solution: ");
@@ -47,6 +56,9 @@ public class uniqueTester {
 	for (String s : args) {
 	    System.out.println(test.TestArray(s));
 	}
-	
+	System.out.println("Testing Comparison Solution: ");
+	for (String s : args) {
+	    System.out.println(test.TestNoSpace(s));
+	}
     }
 }
