@@ -30,8 +30,8 @@ public class CString {
 	while (cstring[length] != '\n') { length++; }
 	for (int i = 0; i < length /2; i++) {
 	    buf = cin.cstring[i];
-	    cin.cstring[i] = cin.cstring[length-i];
-	    cin.cstring[length-i] = buf;
+	    cin.cstring[i] = cin.cstring[length-i-1];
+	    cin.cstring[length-i-1] = buf;
 	}
     }
 
