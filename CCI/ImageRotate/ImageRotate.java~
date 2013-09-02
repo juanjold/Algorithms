@@ -1,0 +1,15 @@
+public class ImageRotate {
+
+  public static int[][] ImageRotate(int[][] image) {
+    int length = image.length;
+    if (length != image[].length)
+      throw new IllegalArgumentException("Input must be nxn matrix"); 
+    int[][] result = new int[length][length]
+    for (int i = 0; i < length; i++) {
+      for (int j = 0; j < length; j++) {
+        result[j][length - i - 1] = image[i][j];
+      }
+    }
+    return result;
+  }
+}
