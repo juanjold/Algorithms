@@ -1,0 +1,36 @@
+class StackArray {
+  public static final int STACK_SIZE = 300;
+  public int[] stacks;
+  public int[3] pointer;
+  public int arrayOne, arrayTwo, arrayThree;
+  
+  public StackArray() {
+    stacks = new int[STACK_SIZE];
+    arrayOne = STACK_SIZE/3;
+    arrayTwo = STACK_SIZE*2/3;
+    arrayThree = STACK_SIZE;
+    pointer = {arrayOne, arrayTwo, arrayThree};
+  }
+
+  public void push(int data, int array) {
+    if (array > 3) {
+      System.out.println("Nonexistent stack");
+      return;
+    }
+    if (array == 1) {
+      if (pointer[0] != arrayOne) {
+        stacks[pointer[0]] = data;
+        pointer[0]++;
+      } else { System.out.println("Stack full"); return; }
+    } else if (array == 2) {
+      if (pointer[1] != arrayTwo) {
+        stacks[pointer[1]] = data;
+        pointer[1]++;
+      } else { System.out.println("Stack full"); return; }
+    } else if (array == 3) {
+      if (pointer[1] != arrayThree) {
+        stakcs[pointer[2]] = data;
+        pointer[2]++;
+      } else { System.out.println("Stack full"); return; }
+    }
+  }
