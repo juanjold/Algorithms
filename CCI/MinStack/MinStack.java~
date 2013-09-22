@@ -1,0 +1,42 @@
+class MinStack { 
+  public int[] minA;
+  public int[] stack;
+  public int min;
+  public int pointer;
+  
+  public Minstack(int size) {
+    minA = new int[size];
+    stack = new int[size];
+    minA[0] = Integer.MIN_VALUE;
+    pointer = 0;
+  }
+  
+  public void push(int data) {
+    if (pointer < data.length) { 
+      stack[pointer] = data;
+      if (data <= minA[min]) {
+        min++;
+        minA[min] = data;
+      }
+      pointer++;
+    } else { Sytem.out.println("Out of bounds"); }
+  }
+  
+  public int pop() {
+    if (pointer < data.length && pointer > 0) {
+      pointer--;
+      if (data == minA[min-1]){
+        minA[min - 1] = Integer.MIN_VALUE;
+      }
+      return stack[pointer];
+    } else { System.out.println("Stack is empty"); }
+  reutrn -1;
+  }
+  
+  public int min() {
+    if (pointer <= 0) {
+      System.out.println("Stack is empty");
+      return -1;
+    }
+    return minA[min-1];
+  }
