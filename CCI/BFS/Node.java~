@@ -1,0 +1,43 @@
+import java.util.LinkedList;
+import java.util.HashSet;
+
+class Node {
+  public HashSet<Node> children;
+  public int data;
+  public boolean marked;
+  
+  public Node(int datum) {
+    data = datum;
+    children = new HashSet<Node>();
+    marked = false;
+  }
+  
+  public void addChild(Node n){
+    children.add(n);
+  }
+  
+  public Node remove(Node n){
+    return children.remove(n);
+  }
+  
+  public void mark() {
+    marked = true;
+  }
+  
+  public static void BFS(Node start) {
+    LinkedList<Node> queue = new LinkedList<Node>();
+    queue.enqueue(start);
+    start.mark();
+    System.out.println(start.data);
+    while(!Queue.isEmpty){
+      Node n = queue.dequeue();
+      for (Node child : n.children) {
+        if (!child.marked) {
+          queue.enqueue(child);
+          child.marked();
+          System.out.println(child.data);
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,16 @@
+// DrJava saved history v2
+Node a =new Node(5)//End of Interaction//
+Node b =new Node(3)//End of Interaction//
+Node c =new Node(6)//End of Interaction//
+Node d =new Node(2)//End of Interaction//
+Node e =new Node(1)//End of Interaction//
+Node f =new Node(4)//End of Interaction//
+Node g =new Node(8)//End of Interaction//
+a.addChild(b)//End of Interaction//
+a.addChild(c)//End of Interaction//
+a.children//End of Interaction//
+b.addChild(d)//End of Interaction//
+b.addChild(e)//End of Interaction//
+a.children//End of Interaction//
+c.addChild(f)//End of Interaction//
+f.addChild(g)//End of Interaction//

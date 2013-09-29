@@ -1,0 +1,44 @@
+/*
+// In-place Implementation of Quicksort
+// @author Juan Jose Lopez Delgado
+// 29-09-13
+*/
+
+public class Sort {
+  public int[] arr;
+  
+  public Sort() {
+  }
+  
+  public Sort(int[] in) {
+    arr = in;
+    arr = quickSort(arr);
+  }
+  
+  public int[] quickSort(int[] arr) {
+    if (arr == null || arr.length <= 1) {
+      return arr;
+    }
+    quickSortWork(arr,0,arr.length-1);
+  }
+  
+  public int[] quickSortWork(int[] arr, int low, int high) {
+    int left = low;
+    int right = high;
+    int pivot = arr[(high - low)/2 + low)];
+    int temp;
+    
+    while (left <= right) {
+      while(arr[left] < pivot) { left++; }
+      while(arr[right] < pivot) { right++; }
+      if (left <= right) {
+        temp = arr[left];
+        arr[left] = right;
+        arr[right] = temp;
+        left++;
+        right++;
+      }
+    }
+    if (low < left) { quickSortWork(arr,low,left); }
+    if (low < right) { quickSortWork(arr,right,high);}
+    
