@@ -1,0 +1,75 @@
+/*
+// A simple version of an array-backed HashTable
+// @author Juan Jose Lopez Delgado
+// 29-09-13
+*/
+
+public class HashTable{ 
+  public int tsize = 20;
+  public Object[][] table;
+  public int size;
+  
+  public HashTable() {
+    table = new Object[tsize][tsize];
+    size = 0;
+  }
+  
+  public HashTable(int in) {
+    table = new Object[in][in];
+    size = 0;
+    tsize = in;
+  }
+  
+  public int hash(Object h) {
+    int result = 30;
+    String buffer = h.toString().toLowerCase();
+    
+    for (int i = 0; i < buffer.length(); i++) { result += (int)buffer.charAt(i); }
+    
+    return (result % tsize);
+  }
+  
+  private int findHash(int hash) {
+    if(table[hash] != null) {
+      for (int i = 0; i < tsize; i++) {
+        if (table[hash][i] != null) {
+          if (c.equals.(table[hash][i])) { return i; }
+        } else return -1;
+      } return -1;
+    } return -1;
+  }
+  
+  public bool contains(Object c) {
+    int hash = hash(c);
+    if (findHash(hash) >= 0) { return true; }
+    return false;
+  }
+  
+  public void add(Object in) {
+    int hash = hash(in);
+    int pos = 0;
+    if (!contains(in)) {
+      if (table[hash] != null) {
+        for (int i = 0; i < tsize; i++) {
+          if (table[hash][i] == null) { pos = i; break; }
+        }
+        table[hash][i] = in;
+      } else {
+        table[hash][0] = in;
+      }
+      size++;
+    } else { System.out.println("Object already exists"); }
+  }
+  
+  public void remove(Object in) {
+    int hash= hash(in);
+    if (!contains(in)) { System.out.println("Could not find object"); }
+    else {
+      int pos = findHash(hash);
+      tableHash[hash][pos] = null;
+      size--;
+    }
+  }
+  public in getNumElements() {
+    return size;
+  }
