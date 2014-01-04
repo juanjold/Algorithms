@@ -10,12 +10,18 @@ public class Path {
     }
   }
 
-  public static boolean path(int i, int j, char[][] grid) {
+  // to search from top-left to bottom-right, intialize with
+  // 0,0,grid,grid.length-1,grid[0].length-1
+  public static boolean path(int i, int j, char[][] grid, int k, int m) {
+    if (k >= grid.length || m >= grid[0].length) {
+      return false;
+    }
+    
     if (i >= grid.length || j >= grid[0].length || 
         i < 0 || j < 0 ) {
       return false;
     }
-    if (i == grid.length-1&& j ==grid[0].length-1) {
+    if (i == k && j == m) {
       grid[i][j] = '*';
       return true;
     }
@@ -25,13 +31,13 @@ public class Path {
     }
     
     grid[i][j] = '*';
-    if(path(i, j-1, grid)) { 
+    if(path(i, j-1, grid,k,m)) { 
       return true; }
-    if(path(i+1, j, grid)) { 
+    if(path(i+1, j, grid,k,m)) { 
       return true; }
-    if(path(i, j+1, grid)) { 
+    if(path(i, j+1, grid,k,m)) { 
       return true; }
-    if(path(i-1, j, grid)) { 
+    if(path(i-1, j, grid,k,m)) { 
       return true; }
 
     grid[i][j] = '-';
