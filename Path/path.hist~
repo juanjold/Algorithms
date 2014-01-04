@@ -1,0 +1,18 @@
+// DrJava saved history v2
+
+int[][] a = new int[5][5]//End of Interaction//
+a[0][0] = 1//End of Interaction//
+a[0][1] = 1//End of Interaction//
+a[0][2] = 1//End of Interaction//
+a[2][2] = 1//End of Interaction//
+a[3][2] = 1//End of Interaction//
+a[4][2] = 1//End of Interaction//
+a[5][2] = 1//End of Interaction//
+a[4][2] = 1//End of Interaction//
+a[4][3] = 1//End of Interaction//
+a[4][4] = 1//End of Interaction//
+a//End of Interaction//
+a[1][1] = 1//End of Interaction//
+a//End of Interaction//
+a[2][1] =1//End of Interaction//
+a//End of Interaction//
