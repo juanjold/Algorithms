@@ -1,0 +1,24 @@
+public class Path {
+  public path() {
+  }
+  
+  public static boolean path(int i, int j, int[][] grid) {
+    if (i >= grid.length && j >= grid[0].length) {
+      if (grid[i][j]) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+    
+    if (path(i + 1, j, grid)) {
+      return true;
+    }
+    
+    if(path(i, j + 1, grid)) {
+      return true;
+    }
+    
+    return false;
+  }
+}
