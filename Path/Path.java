@@ -17,17 +17,14 @@ public class Path {
     }
     if (i == grid.length-1&& j ==grid[0].length-1) {
       grid[i][j] = '*';
-
       return true;
     }
     
     if (grid[i][j] == 'X' || grid[i][j] == '-' || grid[i][j] == '*') {
-
       return false;
     }
     
     grid[i][j] = '*';
-
     if(path(i, j-1, grid)) { 
       return true; }
     if(path(i+1, j, grid)) { 
