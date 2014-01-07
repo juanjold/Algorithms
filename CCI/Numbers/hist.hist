@@ -1,0 +1,9 @@
+// DrJava saved history v2
+import java.util.*//End of Interaction//
+HashSet<Integer> coins = new HashSet<Integer>()//End of Interaction//
+HashMap<Integer,Integer> res = new HashMap<Integer,Integer>();//End of Interaction//
+coins.add(1)//End of Interaction//
+coins.add(2)//End of Interaction//
+coins.add(5)//End of Interaction//
+coins.add(10)//End of Interaction//
+coins.add(25)//End of Interaction//
