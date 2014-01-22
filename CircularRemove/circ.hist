@@ -1,0 +1,12 @@
+// DrJava saved history v2
+import java.util.*//End of Interaction//
+LinkedList<String> l = new LinkedList<String>()//End of Interaction//
+l.add("joseph")//End of Interaction//
+l.add("brandon")//End of Interaction//
+l.add("juan")//End of Interaction//
+l.add("jose")//End of Interaction//
+l.add("peter")//End of Interaction//
+l.add("lolazo")//End of Interaction//
+l.add("holler")//End of Interaction//
+l.add("anthony")//End of Interaction//
+l.add("Craig")//End of Interaction//
