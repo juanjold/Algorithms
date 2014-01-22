@@ -1,3 +1,9 @@
+/*
+// Number of coins needed for change. Different sol'ns
+// @author Juan Jose Lopez Delgado
+// 01-04-14
+*/
+
 import java.util.*;
 
 public class MakeChange {

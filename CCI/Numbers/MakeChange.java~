@@ -24,7 +24,7 @@ public class MakeChange {
   public static int recChange(HashSet<Integer> coins, int change, HashMap<Integer,Integer> results) {
     int minChange = change;
     
-    if (results.containsKey(change)) {
+    if (coins.contains(change)) {
       results.put(change,1);
       return 1;
     } else if (results.containsKey(change)) {

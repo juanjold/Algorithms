@@ -1,3 +1,11 @@
+/*
+// Find path from i,j to k,m, on a given grid.
+// Input: start position, grid, end position
+// Output: traversed grid array
+// @author Juan Jose Lopez Delgado
+// 01-04-14
+*/
+
 public class Path {
   public Path() {
   }
