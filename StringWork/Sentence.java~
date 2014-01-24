@@ -1,0 +1,25 @@
+public class Sentence {
+  public static String reverseWords(String str) {
+   char[] ch = str.toCharArray();
+   char temp;
+   
+   for (int i = 0; i < ch.length/2; i++) {
+     temp = ch[i];
+     ch[i] = ch[ch.length-i-1];
+     ch[ch.length-i-1] = temp;
+   }
+   
+   int pos = 0;
+   for(int i = 0; i < ch.length ; i++) {
+     if (ch[i] == ' ') {
+       for(int j = pos; j < i/2; j++) {
+         temp = ch[j];
+         ch[j] = ch[i - 1];
+         ch[i - 1] = temp;
+       }
+     }
+   }
+  }
+  
+  return ch.toString();
+}
