@@ -7,7 +7,7 @@
 */
 
 public class Sentence {
-  public static String reverseWords(String str) {
+  public static String reverseWords(String str, char delim) {
     if(str == null) { return null; }
    char[] ch = str.toCharArray();
    char temp;
@@ -21,7 +21,7 @@ public class Sentence {
    
    int pos = 0;
    for(int i = 0; i <= ch.length ; i++) {
-     if (i == ch.length || ch[i] == ' ') {
+     if (i == ch.length || ch[i] == delim) {
        for(int j = 0; j < (i - pos)/2; j++) {
          temp = ch[j + pos];
          ch[j + pos] = ch[i - 1 - j];
