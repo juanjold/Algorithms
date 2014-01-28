@@ -1,0 +1,10 @@
+public interface Chance {
+  protected int result;
+  
+  public int cast() ;
+  
+  public static void val(int n);
+  
+  public static void toss(Chance c);
+  
+}
